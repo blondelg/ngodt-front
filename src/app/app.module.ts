@@ -8,12 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { LoginComponent } from './login/login.component';
+import { UploadComponent } from './upload/upload.component';
+import { ResultComponent } from './result/result.component';
+import { ModerationComponent } from './moderation/moderation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    MainComponent
+    MainComponent,
+    LoginComponent,
+    UploadComponent,
+    ResultComponent,
+    ModerationComponent
   ],
   imports: [
     BrowserModule,

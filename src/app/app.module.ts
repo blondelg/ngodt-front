@@ -16,7 +16,9 @@ import { ResultComponent } from './result/result.component';
 import { ModerationComponent } from './moderation/moderation.component';
 import { InformationComponent } from './information/information.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatChipsModule } from '@angular/material/chips'; 
 
 @NgModule({
   declarations: [
@@ -38,6 +40,9 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     FontAwesomeModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

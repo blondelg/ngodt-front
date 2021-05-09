@@ -1,1 +1,45 @@
-<p>upload works!</p>
+<div class="container h-50">
+    <div class="row h-100 justify-content-center">
+        <div class="col-6 my-auto">
+            <div class="row justify-content-center">
+                <div class="col-12 my-auto">
+                    <h1 class="text-center">Charger un GIF</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <mat-form-field class="w-100">
+                    <mat-label>Titre du gif</mat-label>
+                    <input matInput placeholder="La classe américaine" required>
+                </mat-form-field>            
+            </div>
+            <div class="row justify-content-center">
+                <form [formGroup]="uploadForm">             
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="file" formControlName="file" (change)="onImageChange($event)">
+                    </div>
+                    <button class="btn btn-success" type="submit">Upload File</button>
+                </form>
+            </div>
+            <div class="row justify-content-center">              
+                <mat-form-field class="example-chip-list">
+                    <mat-label>Choisissez les libellés</mat-label>
+                    <mat-chip-list #chipList aria-label="Choisissez vos libellés">
+                      <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                               [removable]="removable" (removed)="remove(tag)">
+                        {{tag.name}}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                      </mat-chip>
+                      <input placeholder="Nouveau libellé..."
+                             [matChipInputFor]="chipList"
+                             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                             [matChipInputAddOnBlur]="addOnBlur"
+                             (matChipInputTokenEnd)="add($event)">
+                    </mat-chip-list>
+                </mat-form-field>
+            </div>
+            <div class="row justify-content-center" *ngIf="imgFile">
+                <img [src]="imgFile" style="width:400px; height:250px">
+            </div>
+        </div>
+    </div>
+</div>

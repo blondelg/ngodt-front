@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home/home.component';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
 import { ResultComponent } from './result/result.component';
@@ -17,7 +19,7 @@ import { ModerationComponent } from './moderation/moderation.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    MainComponent,
+    HomeComponent,
     LoginComponent,
     UploadComponent,
     ResultComponent,
@@ -28,6 +30,8 @@ import { ModerationComponent } from './moderation/moderation.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatInputModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

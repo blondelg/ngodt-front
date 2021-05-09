@@ -10,17 +10,28 @@
                 <div class="col-6 my-auto">
                     <mat-form-field class="w-100">
                         <mat-label>Courriel</mat-label>
-                        <input matInput placeholder="gif@ngodt.fr" required>
-                      </mat-form-field>
+                        <input matInput placeholder="gif@ngodt.fr" [(ngModel)]="courriel" (ngModelChange)="courrielChange($event)" required>
+                    </mat-form-field>
                 </div>
                 <div class="col-6 my-auto">
                     <mat-form-field class="w-100">
                         <mat-label>Entrez votre mot de passe</mat-label>
                         <input matInput [type]="hide ? 'password' : 'text'">
-                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </button>
+                        <a matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <fa-icon [hidden]="!hide" [icon]="faEye"></fa-icon>
+                            <fa-icon [hidden]="hide" [icon]="faEyeSlash"></fa-icon>
+                        </a>
                     </mat-form-field>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 my-auto">
+                    <button *ngIf="!isCourrielValid" type="button" class="btn btn-outline-success w-100" disabled>Se connecter</button>
+                    <button *ngIf="isCourrielValid" type="button" class="btn btn-success w-100">Se connecter</button>
+                </div>
+                <div class="col-6 my-auto">
+                    <button *ngIf="!isCourrielValid" type="button" class="btn btn-outline-danger w-100" disabled>Mot de passe oublié</button>
+                    <button *ngIf="isCourrielValid" type="button" class="btn btn-danger w-100">Mot de passe oublié</button>
                 </div>
             </div>
         </div>

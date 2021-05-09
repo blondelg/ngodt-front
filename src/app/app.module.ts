@@ -15,6 +15,8 @@ import { UploadComponent } from './upload/upload.component';
 import { ResultComponent } from './result/result.component';
 import { ModerationComponent } from './moderation/moderation.component';
 import { InformationComponent } from './information/information.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { InformationComponent } from './information/information.component';
     MatSliderModule,
     MatInputModule,
     MatIconModule,
+    FontAwesomeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

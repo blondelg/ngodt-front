@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
 import { ResultComponent } from './result/result.component';
 import { ModerationComponent } from './moderation/moderation.component';
+import { InformationComponent } from './information/information.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModerationComponent } from './moderation/moderation.component';
     LoginComponent,
     UploadComponent,
     ResultComponent,
-    ModerationComponent
+    ModerationComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,

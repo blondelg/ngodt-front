@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 
 export interface Tag {
@@ -29,7 +30,7 @@ export class UploadComponent implements OnInit {
     imgSrc: new FormControl('', [Validators.required])
   });
 
-  constructor() { }
+  constructor(private toastr: ToastrService,) { }
 
   ngOnInit(): void {
   }
@@ -72,6 +73,9 @@ export class UploadComponent implements OnInit {
    
       };
     }
+  }
+
+  onUpload () {
   }
 
 }

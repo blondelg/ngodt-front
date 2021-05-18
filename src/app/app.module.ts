@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatChipsModule } from '@angular/material/chips'; 
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MatChipsModule } from '@angular/material/chips';
     ReactiveFormsModule,
     HttpClientModule,
     MatChipsModule,
+    ToastrModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -58,24 +58,27 @@ export class UploadComponent implements OnInit {
     }
   }
 
+  // tslint:disable-next-line:typedef
   onImageChange(e: any) {
     const reader = new FileReader();
-    
+
     if(e.target.files && e.target.files.length) {
       const [file] = e.target.files;
       reader.readAsDataURL(file);
-    
+
       reader.onload = () => {
         this.imgFile = reader.result as string;
         this.uploadForm.patchValue({
           imgSrc: reader.result
         });
-   
+
       };
     }
   }
 
-  onUpload () {
+  // tslint:disable-next-line:typedef
+  onUpload() {
+    this.toastr.success('Gif chargé');
   }
 
 }
